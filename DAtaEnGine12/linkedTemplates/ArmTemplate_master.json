@@ -1,0 +1,231 @@
+{
+	"$schema": "http://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"factoryName": {
+			"type": "string",
+			"metadata": "Data Factory name",
+			"defaultValue": "DAtaEnGine12"
+		},
+		"AzureBlobStorage1_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'AzureBlobStorage1'"
+		},
+		"AzureDataLakeStorage1_accountKey": {
+			"type": "secureString",
+			"metadata": "Secure string for 'accountKey' of 'AzureDataLakeStorage1'"
+		},
+		"AzureSqlDatabase1_password": {
+			"type": "secureString",
+			"metadata": "Secure string for 'password' of 'AzureSqlDatabase1'"
+		},
+		"AzureSqlDb_password": {
+			"type": "secureString",
+			"metadata": "Secure string for 'password' of 'AzureSqlDb'"
+		},
+		"LS_AzureSqlTarget_password": {
+			"type": "secureString",
+			"metadata": "Secure string for 'password' of 'LS_AzureSqlTarget'"
+		},
+		"LS_lookupactiv_password": {
+			"type": "secureString",
+			"metadata": "Secure string for 'password' of 'LS_lookupactiv'"
+		},
+		"LS_sqlserveronprimeserver12_password": {
+			"type": "secureString",
+			"metadata": "Secure string for 'password' of 'LS_sqlserveronprimeserver12'"
+		},
+		"linkedService1_password": {
+			"type": "secureString",
+			"metadata": "Secure string for 'password' of 'linkedService1'"
+		},
+		"AzureDataLakeStorage1_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://datalakegen243.dfs.core.windows.net/"
+		},
+		"AzureSqlDatabase1_properties_typeProperties_server": {
+			"type": "string",
+			"defaultValue": "sqlserverssis1.database.windows.net"
+		},
+		"AzureSqlDatabase1_properties_typeProperties_database": {
+			"type": "string",
+			"defaultValue": "TARGET_DB"
+		},
+		"AzureSqlDatabase1_properties_typeProperties_userName": {
+			"type": "string",
+			"defaultValue": "kishore"
+		},
+		"AzureSqlDb_properties_typeProperties_server": {
+			"type": "string",
+			"defaultValue": "sqlserverssis1.database.windows.net"
+		},
+		"AzureSqlDb_properties_typeProperties_database": {
+			"type": "string",
+			"defaultValue": "SOURCE_DB"
+		},
+		"AzureSqlDb_properties_typeProperties_userName": {
+			"type": "string",
+			"defaultValue": "kishore"
+		},
+		"LS_AzureSqlTarget_properties_typeProperties_server": {
+			"type": "string",
+			"defaultValue": "sqlserverssis1.database.windows.net"
+		},
+		"LS_AzureSqlTarget_properties_typeProperties_database": {
+			"type": "string",
+			"defaultValue": "TARGET_DB"
+		},
+		"LS_AzureSqlTarget_properties_typeProperties_userName": {
+			"type": "string",
+			"defaultValue": "kishore"
+		},
+		"LS_lookupactiv_properties_typeProperties_server": {
+			"type": "string",
+			"defaultValue": "Kishore-PC\\SQLEXPRESS"
+		},
+		"LS_lookupactiv_properties_typeProperties_database": {
+			"type": "string",
+			"defaultValue": "SALESDB"
+		},
+		"LS_lookupactiv_properties_typeProperties_userName": {
+			"type": "string",
+			"defaultValue": "sa"
+		},
+		"LS_sqlserveronprimeserver12_properties_typeProperties_server": {
+			"type": "string",
+			"defaultValue": "Kishore-PC\\SQLEXPRESS"
+		},
+		"LS_sqlserveronprimeserver12_properties_typeProperties_database": {
+			"type": "string",
+			"defaultValue": "SALESDB"
+		},
+		"LS_sqlserveronprimeserver12_properties_typeProperties_userName": {
+			"type": "string",
+			"defaultValue": "sa"
+		},
+		"linkedService1_properties_typeProperties_server": {
+			"type": "string",
+			"defaultValue": "sqlserverssis1.database.windows.net"
+		},
+		"linkedService1_properties_typeProperties_database": {
+			"type": "string",
+			"defaultValue": "SOURCE_DB"
+		},
+		"linkedService1_properties_typeProperties_userName": {
+			"type": "string",
+			"defaultValue": "kishore"
+		},
+		"containerUri": {
+			"type": "string",
+			"metadata": "URI to storage account containing linked ARM templates"
+		},
+		"containerSasToken": {
+			"type": "string",
+			"metadata": "Sas token to storage account containing linked ARM templates"
+		}
+	},
+	"variables": {
+		"factoryId": "[concat('Microsoft.DataFactory/factories/', parameters('factoryName'))]"
+	},
+	"resources": [
+		{
+			"name": "DAtaEnGine12_ArmTemplate_0",
+			"type": "Microsoft.Resources/deployments",
+			"apiVersion": "2024-03-01",
+			"properties": {
+				"mode": "incremental",
+				"templateLink": {
+					"uri": "[concat(parameters('containerUri'), '/ArmTemplate_0.json', parameters('containerSasToken'))]",
+					"contentVersion": "1.0.0.0"
+				},
+				"parameters": {
+					"factoryName": {
+						"value": "[parameters('factoryName')]"
+					},
+					"AzureBlobStorage1_connectionString": {
+						"value": "[parameters('AzureBlobStorage1_connectionString')]"
+					},
+					"AzureDataLakeStorage1_accountKey": {
+						"value": "[parameters('AzureDataLakeStorage1_accountKey')]"
+					},
+					"AzureSqlDatabase1_password": {
+						"value": "[parameters('AzureSqlDatabase1_password')]"
+					},
+					"AzureSqlDb_password": {
+						"value": "[parameters('AzureSqlDb_password')]"
+					},
+					"LS_AzureSqlTarget_password": {
+						"value": "[parameters('LS_AzureSqlTarget_password')]"
+					},
+					"linkedService1_password": {
+						"value": "[parameters('linkedService1_password')]"
+					},
+					"LS_lookupactiv_password": {
+						"value": "[parameters('LS_lookupactiv_password')]"
+					},
+					"LS_sqlserveronprimeserver12_password": {
+						"value": "[parameters('LS_sqlserveronprimeserver12_password')]"
+					},
+					"AzureDataLakeStorage1_properties_typeProperties_url": {
+						"value": "[parameters('AzureDataLakeStorage1_properties_typeProperties_url')]"
+					},
+					"AzureSqlDatabase1_properties_typeProperties_server": {
+						"value": "[parameters('AzureSqlDatabase1_properties_typeProperties_server')]"
+					},
+					"AzureSqlDatabase1_properties_typeProperties_database": {
+						"value": "[parameters('AzureSqlDatabase1_properties_typeProperties_database')]"
+					},
+					"AzureSqlDatabase1_properties_typeProperties_userName": {
+						"value": "[parameters('AzureSqlDatabase1_properties_typeProperties_userName')]"
+					},
+					"AzureSqlDb_properties_typeProperties_server": {
+						"value": "[parameters('AzureSqlDb_properties_typeProperties_server')]"
+					},
+					"AzureSqlDb_properties_typeProperties_database": {
+						"value": "[parameters('AzureSqlDb_properties_typeProperties_database')]"
+					},
+					"AzureSqlDb_properties_typeProperties_userName": {
+						"value": "[parameters('AzureSqlDb_properties_typeProperties_userName')]"
+					},
+					"LS_AzureSqlTarget_properties_typeProperties_server": {
+						"value": "[parameters('LS_AzureSqlTarget_properties_typeProperties_server')]"
+					},
+					"LS_AzureSqlTarget_properties_typeProperties_database": {
+						"value": "[parameters('LS_AzureSqlTarget_properties_typeProperties_database')]"
+					},
+					"LS_AzureSqlTarget_properties_typeProperties_userName": {
+						"value": "[parameters('LS_AzureSqlTarget_properties_typeProperties_userName')]"
+					},
+					"linkedService1_properties_typeProperties_server": {
+						"value": "[parameters('linkedService1_properties_typeProperties_server')]"
+					},
+					"linkedService1_properties_typeProperties_database": {
+						"value": "[parameters('linkedService1_properties_typeProperties_database')]"
+					},
+					"linkedService1_properties_typeProperties_userName": {
+						"value": "[parameters('linkedService1_properties_typeProperties_userName')]"
+					},
+					"LS_lookupactiv_properties_typeProperties_server": {
+						"value": "[parameters('LS_lookupactiv_properties_typeProperties_server')]"
+					},
+					"LS_lookupactiv_properties_typeProperties_database": {
+						"value": "[parameters('LS_lookupactiv_properties_typeProperties_database')]"
+					},
+					"LS_lookupactiv_properties_typeProperties_userName": {
+						"value": "[parameters('LS_lookupactiv_properties_typeProperties_userName')]"
+					},
+					"LS_sqlserveronprimeserver12_properties_typeProperties_server": {
+						"value": "[parameters('LS_sqlserveronprimeserver12_properties_typeProperties_server')]"
+					},
+					"LS_sqlserveronprimeserver12_properties_typeProperties_database": {
+						"value": "[parameters('LS_sqlserveronprimeserver12_properties_typeProperties_database')]"
+					},
+					"LS_sqlserveronprimeserver12_properties_typeProperties_userName": {
+						"value": "[parameters('LS_sqlserveronprimeserver12_properties_typeProperties_userName')]"
+					}
+				}
+			},
+			"dependsOn": []
+		}
+	]
+}

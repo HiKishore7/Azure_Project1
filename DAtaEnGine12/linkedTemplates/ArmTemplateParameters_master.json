@@ -1,0 +1,96 @@
+{
+	"$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"factoryName": {
+			"value": "DAtaEnGine12"
+		},
+		"AzureBlobStorage1_connectionString": {
+			"value": ""
+		},
+		"AzureDataLakeStorage1_accountKey": {
+			"value": ""
+		},
+		"AzureSqlDatabase1_password": {
+			"value": ""
+		},
+		"AzureSqlDb_password": {
+			"value": ""
+		},
+		"LS_AzureSqlTarget_password": {
+			"value": ""
+		},
+		"LS_lookupactiv_password": {
+			"value": ""
+		},
+		"LS_sqlserveronprimeserver12_password": {
+			"value": ""
+		},
+		"linkedService1_password": {
+			"value": ""
+		},
+		"AzureDataLakeStorage1_properties_typeProperties_url": {
+			"value": "https://datalakegen243.dfs.core.windows.net/"
+		},
+		"AzureSqlDatabase1_properties_typeProperties_server": {
+			"value": "sqlserverssis1.database.windows.net"
+		},
+		"AzureSqlDatabase1_properties_typeProperties_database": {
+			"value": "TARGET_DB"
+		},
+		"AzureSqlDatabase1_properties_typeProperties_userName": {
+			"value": "kishore"
+		},
+		"AzureSqlDb_properties_typeProperties_server": {
+			"value": "sqlserverssis1.database.windows.net"
+		},
+		"AzureSqlDb_properties_typeProperties_database": {
+			"value": "SOURCE_DB"
+		},
+		"AzureSqlDb_properties_typeProperties_userName": {
+			"value": "kishore"
+		},
+		"LS_AzureSqlTarget_properties_typeProperties_server": {
+			"value": "sqlserverssis1.database.windows.net"
+		},
+		"LS_AzureSqlTarget_properties_typeProperties_database": {
+			"value": "TARGET_DB"
+		},
+		"LS_AzureSqlTarget_properties_typeProperties_userName": {
+			"value": "kishore"
+		},
+		"LS_lookupactiv_properties_typeProperties_server": {
+			"value": "Kishore-PC\\SQLEXPRESS"
+		},
+		"LS_lookupactiv_properties_typeProperties_database": {
+			"value": "SALESDB"
+		},
+		"LS_lookupactiv_properties_typeProperties_userName": {
+			"value": "sa"
+		},
+		"LS_sqlserveronprimeserver12_properties_typeProperties_server": {
+			"value": "Kishore-PC\\SQLEXPRESS"
+		},
+		"LS_sqlserveronprimeserver12_properties_typeProperties_database": {
+			"value": "SALESDB"
+		},
+		"LS_sqlserveronprimeserver12_properties_typeProperties_userName": {
+			"value": "sa"
+		},
+		"linkedService1_properties_typeProperties_server": {
+			"value": "sqlserverssis1.database.windows.net"
+		},
+		"linkedService1_properties_typeProperties_database": {
+			"value": "SOURCE_DB"
+		},
+		"linkedService1_properties_typeProperties_userName": {
+			"value": "kishore"
+		},
+		"containerUri": {
+			"value": ""
+		},
+		"containerSasToken": {
+			"value": ""
+		}
+	}
+}
