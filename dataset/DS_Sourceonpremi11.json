@@ -1,0 +1,12 @@
+{
+	"name": "DS_Sourceonpremi11",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "LS_sqlserveronprimeserver12",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "SqlServerTable",
+		"schema": []
+	}
+}
