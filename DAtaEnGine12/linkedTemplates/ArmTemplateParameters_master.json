@@ -32,6 +32,9 @@
 		"AzureDataLakeStorage1_properties_typeProperties_url": {
 			"value": "https://datalakegen243.dfs.core.windows.net/"
 		},
+		"AzureKeyVault1_properties_typeProperties_baseUrl": {
+			"value": "https://keyvaultuser123.vault.azure.net/"
+		},
 		"AzureSqlDatabase1_properties_typeProperties_server": {
 			"value": "sqlserverssis1.database.windows.net"
 		},
