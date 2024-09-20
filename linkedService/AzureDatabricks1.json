@@ -13,9 +13,12 @@
 				},
 				"secretName": "AccessToke1"
 			},
-			"newClusterNodeType": "Standard_NC6s_v3",
+			"newClusterNodeType": "Standard_D3_v2",
 			"newClusterNumOfWorker": "1",
-			"newClusterVersion": "11.3.x-gpu-ml-scala2.12",
+			"newClusterSparkEnvVars": {
+				"PYSPARK_PYTHON": "/databricks/python3/bin/python3"
+			},
+			"newClusterVersion": "12.2.x-photon-scala2.12",
 			"clusterOption": "Fixed",
 			"newClusterInitScripts": []
 		}
